@@ -11,7 +11,7 @@
   ""
   [source-ns raw]
   (let [ops (read-string raw)]
-    (concat (list (first ops)
+    (concat (list 'doctest.core/doctest
                   source-ns)
             (rest ops))))
 

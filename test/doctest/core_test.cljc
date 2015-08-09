@@ -2,8 +2,10 @@
   (:require [doctest.core :as core]
             [clojure.test :refer :all]))
 
-(def raw-doctest "(doctest.core/doctest
+(def raw-doctest "(doctest
                     (println \"test running\")
+                    (println adder)
+                    (is (= 2 (adder 1 1)))
                     (is true))")
 
 (deftest run-doctest
